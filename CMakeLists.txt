@@ -28,7 +28,7 @@ set ( EV_LIBPNG_SRCS
 add_definitions( -DPNG_ARM_NEON_OPT=0 )
 
 add_library( png ${EV_LIBPNG_SRCS} )
-target_link_libraries( png z ) 
+target_link_libraries( png z m ) 
 
 install(TARGETS png DESTINATION lib)
 install(FILES png.h DESTINATION include)
